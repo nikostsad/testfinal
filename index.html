@@ -1,20 +1,18 @@
-   	// Requires jQuery!
-jQuery.ajax({
-    url: "https://hrworks.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/6i46lu/b/8/b0105d975e9e59f24a3230a22972a71a/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs.js?locale=de-DE&collectorId=7147d131",
-    type: "get",
-    cache: true,
-    dataType: "script"
-});
+<script type="text/javascript" src="https://hrworks.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/6i46lu/b/8/c95134bc67d3a521bb3f4331beb9b804/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=de-DE&collectorId=7147d131"></script>
 
- window.ATL_JQ_PAGE_PROPS =  {
-	"triggerFunction": function(showCollectorDialog) {
-		//Requires that jQuery is available! 
-		jQuery("#id-3301-128").click(function(e) {
+<script type="text/javascript">  window.ATL_JQ_PAGE_PROPS = $.extend(window.ATL_JQ_PAGE_PROPS, {
+
+	// ==== custom trigger function ====
+	triggerFunction : function( showCollectorDialog ) {
+		$('#atlwdg-trigger').on( 'click', function(e) {
 			e.preventDefault();
 			showCollectorDialog();
-		});
+		}); 
 	},
-		fieldValues: {
-			description : "Welche Rollen wurden genutzt (Admin, Vorgesetzte, Mitarbeiter, Stellvertreter)? \n \nWelche Rollen und Berechtigungen haben die Nutzer/Admins? \n \nGewünschtes Verhalten? \n \nRepro des Bugs (Schritt für Schritt):"
-	}	
-	};
+	// ==== we add the code below to set the field values ====
+	fieldValues: {
+			summary : 'TestTest',
+			description : 'Niklas ist der beste',
+			priority : '2'
+	}					
+});</script>
